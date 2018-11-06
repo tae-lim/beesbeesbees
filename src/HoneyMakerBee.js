@@ -1,16 +1,16 @@
 var HoneyMakerBee = function() {
-  Bee.call(this);
+  Bee.call(this);  
   this.age = 10;
   this.job = 'make honey';
-  this.color = bee.color;
   this.honeyPot = 0;
 };
 
 HoneyMakerBee.prototype = Object.create(Bee.prototype);
-HoneyMakerBee.prototype.makeHoney = function () {
+HoneyMakerBee.prototype.constructor = HoneyMakerBee;
+
+HoneyMakerBee.prototype.makeHoney = function() {
   this.honeyPot++;
 };
-HoneyMakerBee.prototype.giveHoney = function () {
+HoneyMakerBee.prototype.giveHoney = function() {
   this.honeyPot--;
-};
-HoneyMakerBee.prototype.constructor = HoneyMakerBee;
+};;
